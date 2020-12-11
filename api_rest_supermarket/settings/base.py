@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #local apps
     'applications.stores',
+    'applications.brands',
     #third apps
     'rest_framework',
 ]
