@@ -11,5 +11,5 @@ class DealsSerializers(serializers.ModelSerializer):
             'store',
             'image',
             'price',
-            'price_currency',
+            
         )
