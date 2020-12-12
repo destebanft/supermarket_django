@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <title>@destebanft</title>
+  </head>
+  <body class="">
+    <div class="grid-container">
+        <div class="grid-x">
+          <h3 class="cell">Prueba desarrollador</h3>
+          <div class="cell">
+            <ul class="vertical menu align-center">
+              <li><a href="{% url 'store:api_store' %}">Tiendas</a></li>
+              <li><a href="{% url 'brands:api_brands' %}">Marcas</a></li>
+              <li><a href="{% url 'deals:api_deals' %}">Ofertas</a></li>
+              <li><a href="#">Autenticación de usuarios</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    <script src="{% static 'js/vendor.js' %}"></script>
+    <script src="{% static 'js/foundation.js' %}"></script>
+    <script>
+     $(document).foundation();
+   </script>
+  </body>
+</html>
