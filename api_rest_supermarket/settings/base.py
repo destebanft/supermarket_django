@@ -24,8 +24,11 @@ INSTALLED_APPS = [
     #local apps
     'applications.stores',
     'applications.brands',
+    'applications.deals',
     #third apps
     'rest_framework',
+    'djmoney',
+
 ]
 
 MIDDLEWARE = [
