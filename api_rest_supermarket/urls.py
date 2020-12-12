@@ -23,4 +23,5 @@ urlpatterns = [
     re_path('', include('applications.stores.urls')),
     re_path('', include('applications.brands.urls')),
     re_path('', include('applications.deals.urls')),
+    re_path('', include('applications.users.urls')),
 ]
