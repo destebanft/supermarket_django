@@ -25,9 +25,10 @@ INSTALLED_APPS = [
     'applications.stores',
     'applications.brands',
     'applications.deals',
+    'applications.users',
     #third apps
     'rest_framework',
-    'djmoney',
+    'rest_framework.authtoken',
 
 ]
 

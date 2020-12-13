@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <title>@destebanft</title>
+  </head>
+  <body class="">
+    <h2>Login</h2>
+
+    <div class="grid-container">
+        <div class="grid-x">
+        <div class="cell">
+
+          <label for="phoneNumber">Número de teléfono</label>
+          <div class="input-group">
+            <span class="input-group-label">+57</span>
+            <input class="input-group-field" type="tel" id="phoneNumber" name="phoneNumber" placeholder="3201234567"/>
+          </div>
+        </div>
+        <div class="cell">
+          <label for="code">Code</label> <br>
+          <input type="text" id="code" name="code"/ placeholder="001122"> <br>
+        </div>
+        <div class="cell" id="recaptcha-container"></div>
+        <div class="cell">
+          <button type="button" class="success button" id="signInWithPhone">Login</button>
+          <button type="button" class="primary button" id="getCode">Get Code</button>
+        </div>
+
+      </div>
+    </div>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+     <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+     <!-- Add Firebase products that you want to use -->
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+     <script src="{% static 'js/firebase.js' %}"></script>
+     <!-- Foundation Style -->
+    <script src="{% static 'js/vendor.js' %}"></script>
+    <script src="{% static 'js/foundation.js' %}"></script>
+    <script>
+     $(document).foundation();
+   </script>
+  </body>
+</html>
