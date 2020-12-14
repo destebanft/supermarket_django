@@ -14,9 +14,9 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.mysql', #'django.db.backends.sqlite3'
         'NAME': 'supermarket_db', #'NAME': BASE_DIR / 'db.sqlite3'
-        'USER': 'esteban',
-        'PASSWORD': 'Sopra2020*-*',
-        'HOST': '192.168.5.85',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
