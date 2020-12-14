@@ -1,13 +1,8 @@
-# supermarket_django
+# Supermarket_django
 
-Esta proyecto esta compuesto de 4 apliaciones
+Cualquier inquietud escribir al correo estebanfajardo1101@gmail.com
 
-- Brands: localhost:8000/brands
-- Deals: localhost:8000/Deals
-- Stores: localhost:8000/stores
-- Users: localhost:8000/users
-
-## Correr proyecto en linux
+## Correr el proyecto en linux
 
 1. sudo apt install python3-dev, libmysqlclient-development, virtualenv
 2. virtualenv dev --python=python3
@@ -17,3 +12,13 @@ Esta proyecto esta compuesto de 4 apliaciones
 6. cd supermarket_django
 7. pip install --upgrade setuptools
 8. pip install -r requeriments.txt
+9. python3 manage.py runsever
+10. Ingresar a http://localhost:8000/
+
+
+Esta proyecto esta compuesto de 4 apliaciones
+
+- Brands: http://localhost:8000/brands
+- Deals: http://localhost:8000/Deals
+- Stores: http://localhost:8000/stores
+- Users: http://localhost:8000/users
