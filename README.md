@@ -33,6 +33,19 @@ Esta proyecto esta compuesto de 4 apliaciones
 - Stores: http://localhost:8000/stores
 - Users: http://localhost:8000/users
 
+
+## Correr el proyecto en windows (Git bash)
+1. Instalar pip
+2. python -m venv dev
+3. cd dev
+4. source Scripts/activate
+5. git clone https://github.com/destebanft/supermarket_django.git
+6. cd supermarket_django
+7. pip install --upgrade setuptools
+8. pip install -r requeriments.txt
+10. py manage.py runserver
+11. Ingresar a http://localhost:8000/
+
 ### Inicio de sesión
 
 Números y códigos de prueba:
@@ -40,3 +53,8 @@ Números y códigos de prueba:
 - Número: 3500000000, Código: 999999.
 - Número: 3201234567, Código: 001122.
 - Puede utilizar su número de teléfonp y llegara un mensaje de texto con el código.
+
+## Usuario Administrador
+
+- Username: desarrollo
+- Password: 12345678

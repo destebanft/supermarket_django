@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2020 at 11:20 PM
+-- Generation Time: Dec 15, 2020 at 12:21 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -182,6 +182,14 @@ CREATE TABLE `brands_brands` (
   `logo` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `brands_brands`
+--
+
+INSERT INTO `brands_brands` (`id`, `name`, `logo`) VALUES
+(1, 'Almacenes Exito', 'https://es.wikipedia.org/wiki/%C3%89xito_(supermercado)#/media/Archivo:Grupo_Exito_logo.svg'),
+(2, 'Almacenes Pereira', 'https://www.pereiraplaza.co/wp-content/uploads/2020/11/logo-home-3.png');
+
 -- --------------------------------------------------------
 
 --
@@ -195,6 +203,14 @@ CREATE TABLE `deals_deals` (
   `image` varchar(300) NOT NULL,
   `price` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `deals_deals`
+--
+
+INSERT INTO `deals_deals` (`id`, `name`, `store`, `image`, `price`) VALUES
+(1, 'Bicicleta Roadmastaer Jumper 29 shimano Negro Naranja', 2, 'https://exitocol.vtexassets.com/arquivos/ids/3791393-1200-auto?width=1200&height=auto&aspect=true', 689900),
+(2, 'Bicicleta Roadmastaer Jumper 29 shimano Negro Verde', 1, 'https://exitocol.vtexassets.com/arquivos/ids/3791393-1200-auto?width=1200&height=auto&aspect=true', 679900);
 
 -- --------------------------------------------------------
 
@@ -212,6 +228,18 @@ CREATE TABLE `django_admin_log` (
   `content_type_id` int(11) DEFAULT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `django_admin_log`
+--
+
+INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`, `action_flag`, `change_message`, `content_type_id`, `user_id`) VALUES
+(1, '2020-12-14 23:15:19.152862', '1', 'Almacenes Exito', 1, '[{\"added\": {}}]', 8, 1),
+(2, '2020-12-14 23:16:16.095473', '2', 'Almacenes Pereira', 1, '[{\"added\": {}}]', 8, 1),
+(3, '2020-12-14 23:17:06.424083', '1', 'exito_parque_arboleda', 1, '[{\"added\": {}}]', 7, 1),
+(4, '2020-12-14 23:18:18.904075', '2', 'pereira_plaza', 1, '[{\"added\": {}}]', 7, 1),
+(5, '2020-12-14 23:19:02.885327', '1', 'Bicicleta Roadmastaer Jumper 29 shimano Negro Naranja', 1, '[{\"added\": {}}]', 9, 1),
+(6, '2020-12-14 23:19:35.912258', '2', 'Bicicleta Roadmastaer Jumper 29 shimano Negro Verde', 1, '[{\"added\": {}}]', 9, 1);
 
 -- --------------------------------------------------------
 
@@ -324,6 +352,14 @@ CREATE TABLE `stores_stores` (
   `thumbnail` varchar(30) NOT NULL,
   `address` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `stores_stores`
+--
+
+INSERT INTO `stores_stores` (`id`, `brand`, `identifier`, `name`, `thumbnail`, `address`) VALUES
+(1, 1, 'exito_parque_arboleda', 'Exito Parque Arboleda', '#', 'Cra. 14 #5-20, Pereira, Risaralda'),
+(2, 2, 'pereira_plaza', 'Centro Comercial Pereira Plaza', '#', 'Calle 15 No. 13-110');
 
 -- --------------------------------------------------------
 
@@ -498,19 +534,19 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `brands_brands`
 --
 ALTER TABLE `brands_brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `deals_deals`
 --
 ALTER TABLE `deals_deals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `django_content_type`
@@ -528,7 +564,7 @@ ALTER TABLE `django_migrations`
 -- AUTO_INCREMENT for table `stores_stores`
 --
 ALTER TABLE `stores_stores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users_user`
