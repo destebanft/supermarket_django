@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <title>@destebanft</title>
+  </head>
+
+
+  <body class="">
+    <div class="grid-container">
+      <div class="grid-x">
+        <h2 class="cell text-center">Registro</h2>
+        <div class="cell">
+        <form class="" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button class="button" type="submit">Registar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'js/vendor.js' %}"></script>
+    <script src="{% static 'js/foundation.js' %}"></script>
+    <script>
+     $(document).foundation();
+   </script>
+  </body>
+</html>

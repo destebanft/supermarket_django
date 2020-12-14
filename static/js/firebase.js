@@ -46,6 +46,11 @@ const signInWithPhone = sentCodeId => {
     user.getIdToken().then(
       function(idToken){
         console.log(idToken);
+        var data = {'token_id': idToken};
+        axios.post('/api-auth/', data).then(
+          function(response){
+            console.log(response);
+          })
       }).catch(function(error){
           //error
       }

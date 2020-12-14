@@ -4,48 +4,57 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from .serializers import LoginMessageSerializer
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
 from .models import User
+from .forms import UserRegisterForm
 # Create your views here.
 
 
-class LoginUser(TemplateView):
-    template_name = 'login.html'
+
 
 
 class LoginView(APIView):
     serializer_class = LoginMessageSerializer
-
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
         id_token = serializer.data.get('token_id')
         decoded_token = auth.verify_id_token(id_token)
-        email = decoded_token['email']
-        #name = decoded_token['name']
-        idfb = decoded_token['uid']
+        id_fb = decoded_token['uid']
+        email = '***'
+        phoneNumber = '***'
+        name = '***'
         new_user, created = User.objects.get_or_create(
-            email=email,
+            id_fb=id_fb,
             defaults={
-                #'name': name,
+                'id_fb': id_fb,
+                'name': name,
                 'email': email,
-                'idfb': idfb
+                'phoneNumber': phoneNumber
             }
         )
+        print('NEW USER', type(new_user), new_user)
         if created:
-            token = Token.objects.create(user=new_user)
+            print('CREADO')
+            token = Token.objects.create(user=new_user.id_fb)
         else:
-            token = Token.objects.get(user=new_user)
+            print('NO CREADO')
+            token = Token.objects.get(user=new_user.id_fb)
 
         userGet = {
-            'id': new_user.pk,
+            'id_fb': new_user.id_fb,
+            'name': new_user.name,
             'email': new_user.email,
-            #'name': new_user.name,
-            'idfb': new_user.idfb,
+            'phoneNumber': new_user.phoneNumber
             }
-        return Response(
-        {
-            'token': token.key,
-            'user': userGet
-        }
-        )
+        return None
+
+class UserRegisterView(CreateView):
+    template_name = 'register.html'
+    form_class = UserRegisterForm
+
+    success_url = 'loginUser'
+
+
+class UserLoginView(TemplateView):
+    template_name = 'login.html'
