@@ -3,14 +3,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}"/>
     <title>@destebanft</title>
   </head>
   <body class="">
-    <h2>Login</h2>
+
 
     <div class="grid-container">
         <div class="grid-x">
+          <div class="cell">
+              <h2>Inicio de sesión</h2>
+          </div>
         <div class="cell">
 
           <label for="phoneNumber">Número de teléfono</label>
@@ -20,15 +23,19 @@
           </div>
         </div>
         <div class="cell">
-          <label for="code">Code</label> <br>
-          <input type="text" id="code" name="code"/ placeholder="001122"> <br>
-        </div>
-        <div class="cell" id="recaptcha-container"></div>
-        <div class="cell">
-          <button type="button" class="success button" id="signInWithPhone">Login</button>
-          <button type="button" class="primary button" id="getCode">Get Code</button>
+          <label for="code">Código de verificación</label>
+          <div class="cell" id="recaptcha-container"></div>
+          <div class="input-group">
+          <input type="text" id="code" name="code" placeholder="001122"/>
+          <div class="input-group-button">
+            <button type="button" class="primary button" id="getCode">Obtener Código</button>
+          </div>
         </div>
 
+        <div class="cell">
+          <button type="button" class="success button" id="signInWithPhone">Iniciar sesión</button>
+        </div>
+        <div class="cell" id="messageLogin"></div>
       </div>
     </div>
     <!-- Axios -->

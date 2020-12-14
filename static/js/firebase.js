@@ -42,6 +42,11 @@ const signInWithPhone = sentCodeId => {
   //console.log(code);
     confirmationResult.confirm(code).then(function (result) {
     // User signed in successfully.
+    document.getElementById("messageLogin").innerHTML = `
+      <div class="callout success">
+        <h5>Inicio de sesión correcto</h5>
+      </div>
+    `;
     var user = result.user;
     user.getIdToken().then(
       function(idToken){
@@ -59,6 +64,11 @@ const signInWithPhone = sentCodeId => {
   }).catch(function (error) {
     // User couldn't sign in (bad verification code?)
     // ...
+    document.getElementById("messageLogin").innerHTML = `
+      <div class="callout alert">
+        <h5>Código o número de teléfono incorrecto</h5>
+      </div>
+    `;
   });
 
 
