@@ -26,14 +26,6 @@ En el repositorio queda el archivo supermarket_db.sql, importarlo en mariaDB. Si
 10. Ingresar a http://localhost:8000/
 
 
-Esta proyecto esta compuesto de 4 apliaciones
-
-- Brands: http://localhost:8000/brands
-- Deals: http://localhost:8000/Deals
-- Stores: http://localhost:8000/stores
-- Users: http://localhost:8000/users
-
-
 ## Correr el proyecto en windows (Git bash)
 1. Instalar pip
 2. python -m venv dev
@@ -46,8 +38,17 @@ Esta proyecto esta compuesto de 4 apliaciones
 10. py manage.py runserver
 11. Ingresar a http://localhost:8000/
 
+Esta proyecto esta compuesto de 4 apliaciones
+
+- Brands: http://localhost:8000/brands
+- Deals: http://localhost:8000/Deals
+- Stores: http://localhost:8000/stores
+- Users: http://localhost:8000/users
+
+
 ### Inicio de sesión
 
+http://localhost:8000/users
 Números y códigos de prueba:
 
 - Número: 3500000000, Código: 999999.
